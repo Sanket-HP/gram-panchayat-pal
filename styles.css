@@ -30,7 +30,7 @@ nav a {
 }
 
 /* Gram Panchayat Photo */
-img {
+img#gramPanchayatPhoto {
     max-width: 100%;
     height: auto;
     margin: 20px 0;
