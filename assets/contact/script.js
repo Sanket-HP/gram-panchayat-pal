@@ -1,24 +1,25 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Get the contact form element
-    const contactForm = document.querySelector('form');
+    var contactForm = document.querySelector('form');
 
     // Add a submit event listener to the form
-    contactForm.addEventListener('submit', function (event) {
-        // Prevent the form from submitting by default
+    contactForm.addEventListener('submit', function(event) {
+        // Prevent the default form submission
         event.preventDefault();
 
-        // Validate the form fields
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        // Get the values from the form fields
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
 
-        if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-            alert('Please fill in all required fields.');
-        } else {
-            // If all fields are filled, you can perform further actions here
-            alert('Form submitted successfully!');
-            // You may want to send the form data to a server, for example.
-        }
+        // Log the form data to the console (you can replace this with your desired functionality)
+        console.log("Form submitted with the following data:");
+        console.log("Name: " + name);
+        console.log("Email: " + email);
+        console.log("Message: " + message);
+
+        // You can add further processing or send the form data to a server here
     });
 });
+
 
