@@ -58,6 +58,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+}
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
@@ -69,5 +70,14 @@ footer {
     nav ul li {
         margin: 0;
         margin-bottom: 10px;
+    }
+
+    /* Example: Show/hide navigation menu on small screens */
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show-menu {
+        display: flex;
     }
 }
