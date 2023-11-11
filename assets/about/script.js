@@ -1,22 +1,17 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the main content area
-    var mainContent = document.querySelector('.main-content');
+    // Get all member images
+    var memberImages = document.querySelectorAll('.member img');
 
-    // Add a click event listener to the main content area
-    mainContent.addEventListener('click', function() {
-        // Change the background color on click
-        mainContent.style.backgroundColor = getRandomColor();
+    // Add a click event listener to each member image
+    memberImages.forEach(function(image) {
+        image.addEventListener('click', function() {
+            // Get the alt text of the clicked image
+            var memberName = image.alt;
+
+            // Log a message with the selected member's name (you can replace this with your desired functionality)
+            console.log("You selected the member: " + memberName);
+
+            // You can add further processing or display more information about the selected member here
+        });
     });
-
-    // Function to generate a random color
-    function getRandomColor() {
-        var letters = '0123456789ABCDEF';
-        var color = '#';
-        for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
 });
-
-
