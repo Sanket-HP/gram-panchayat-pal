@@ -1,10 +1,19 @@
-// Get a reference to the Gram Panchayat photo
-const gramPanchayatPhoto = document.querySelector('#gramPanchayatPhoto');
+// Wait for the DOM content to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all the navigation links
+    var navLinks = document.querySelectorAll('nav a');
 
-// Add a click event listener to the Gram Panchayat photo
-gramPanchayatPhoto.addEventListener('click', () => {
-    alert('Welcome to Gram Panchayat!'); // Display an alert when clicked
+    // Add a click event listener to each navigation link
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            // Log the clicked link text to the console
+            console.log('Clicked link:', link.textContent);
+            
+            // You can add more functionality here, such as navigating to the clicked link
+            // For example, window.location.href = link.href;
+        });
+    });
 });
-
-// You can add more JavaScript functionality as needed
-// For example, handling form submissions, dynamic content updates, etc.
