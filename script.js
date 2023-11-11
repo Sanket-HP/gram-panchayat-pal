@@ -1,4 +1,3 @@
-// Wait for the DOM content to be fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     // Get all the navigation links
     var navLinks = document.querySelectorAll('nav a');
@@ -16,4 +15,14 @@ document.addEventListener("DOMContentLoaded", function() {
             // For example, window.location.href = link.href;
         });
     });
+
+    // Example: Toggle navigation menu on small screens
+    var menuButton = document.getElementById('menu-button');
+    var navList = document.querySelector('nav ul');
+
+    if (menuButton && navList) {
+        menuButton.addEventListener('click', function() {
+            navList.classList.toggle('show-menu');
+        });
+    }
 });
