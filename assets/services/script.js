@@ -1,14 +1,20 @@
-// You can add JavaScript functionality here if needed
-// For example, dynamic content updates or interactions
-document.addEventListener('DOMContentLoaded', function () {
-    // Sample: Add a click event listener to the services list items
-    const servicesList = document.querySelectorAll('ul li');
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all service links
+    var serviceLinks = document.querySelectorAll('ul a');
 
-    servicesList.forEach(function (service) {
-        service.addEventListener('click', function () {
-            alert(`You selected: ${service.textContent}`);
-            // You can add more functionality here, such as displaying details of the selected service.
+    // Add a click event listener to each service link
+    serviceLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            // Get the text content of the clicked link
+            var serviceName = link.textContent;
+
+            // Alert a message with the selected service name (you can replace this with your desired functionality)
+            alert("You selected the service: " + serviceName);
+
+            // You can add further processing or redirect the user to the selected service link here
         });
     });
 });
-
